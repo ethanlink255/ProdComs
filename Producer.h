@@ -1,3 +1,6 @@
+#ifndef PRODUCER_H
+#define PRODUCER_H
+
 #include "itemQueue.h"
 #include <string>
 
@@ -12,4 +15,6 @@ public:
 	Producer(string n, itemQueue q);
 	void produce();
 
+};
 
+#endif

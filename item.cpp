@@ -1,14 +1,14 @@
 #include "item.h"
 
-item(string prod, int i){
+item::item(std::string prod, int i){
 	producer = prod;
 	i = id;
 }
 
-int getId(){
+int item::getId(){
 	return id;
 }
 
-string getProducer(){
+std::string item::getProducer(){
 	return producer;
 }

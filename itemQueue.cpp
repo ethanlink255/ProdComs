@@ -1,9 +1,11 @@
 #include "itemQueue.h"
 
-void put(item* val){
+void itemQueue::put(item val){
 	iq.push(val);
 }
 
-item* take(){
-	return iq.pop();
+item itemQueue::take(){
+	item ci = iq.front();
+	iq.pop();
+	return ci;
 }

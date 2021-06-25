@@ -1,10 +1,10 @@
 #include "Consumer.h"
 
-Consumer(string n, itemQueue q){
-	queue = q;
+Consumer::Consumer(std::string n, itemQueue q){
+	iq = q;
 	name = n;
 }
 
-void consume(){
-	queue.take();
-
+void Consumer::consume(){
+	iq.take();
+}

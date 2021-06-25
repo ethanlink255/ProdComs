@@ -1,13 +1,18 @@
+#ifndef ITEM_H
+#define ITEM_H
+
 #include <string>
 
-using namespace std;
+//using namespace std;
 
 class item{
 public:
-	item(string prod, int i);
+	item(std::string prod, int i);
 	int getId();
-	string getProducer();
+	std::string getProducer();
 private:
-	String producer;
+	std::string producer;
 	int id;
-}
+};
+
+#endif

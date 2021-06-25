@@ -1,12 +1,13 @@
 #include "Producer.h"
 
-Producer(string n, itemQueue q){
+Producer::Producer(string n, itemQueue q){
 	name = n;
 	iq = q;
 	itemId = 0;
 }
-void produce(){
-	item* pItem = new item(name, iq);
+
+void Producer::produce(){
+	item pItem(name, itemId);
 	itemId++;
-	iq.push(pItem);
+	iq.put(pItem);
 }
