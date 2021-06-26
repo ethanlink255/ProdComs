@@ -2,8 +2,9 @@
 #define ITEM_H
 
 #include <string>
+#include <iostream>
 
-//using namespace std;
+using namespace std;
 
 class item{
 public:
@@ -11,8 +12,8 @@ public:
 	int getId();
 	std::string getProducer();
 private:
-	std::string producer;
-	int id;
+	std::string producer = "UNSET";
+	int id = -1;
 };
 
 #endif

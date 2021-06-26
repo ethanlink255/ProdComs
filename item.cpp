@@ -2,7 +2,7 @@
 
 item::item(std::string prod, int i){
 	producer = prod;
-	i = id;
+	id = i;
 }
 
 int item::getId(){

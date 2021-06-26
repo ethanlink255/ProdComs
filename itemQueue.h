@@ -2,8 +2,12 @@
 #define ITEMQUEUE_H
 
 #include <queue>
+#include <mutex>
 #include "item.h"
 
+
+//TEMP
+#include <iostream>
 
 using namespace std;
 
@@ -13,6 +17,9 @@ private:
 public:
 	void put(item val);
 	item take();
+
+	int cid();
+	int len();
 
 };
 
