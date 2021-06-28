@@ -8,11 +8,13 @@ using namespace std;
 
 class item{
 public:
-	item(std::string prod, int i);
+	item(string prod, int i);
 	int getId();
-	std::string getProducer();
+	string getProducer();
 private:
-	std::string producer = "UNSET";
+	//these values are preinitialized so you can see the change after init,
+	//note because they need to be
+	string producer = "UNSET";
 	int id = -1;
 };
 

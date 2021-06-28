@@ -9,9 +9,13 @@ void itemQueue::put(item val){
 }
 
 item itemQueue::take(){
-	item ci = iq.front();
-	iq.pop();
-	return ci;
+	//checks if there as an element in the queue to return, else throw excpetion
+	if(iq.size() != 0){
+		item ci = iq.front();
+		iq.pop();
+		return ci;
+	}
+	throw out_of_range("No elements present in itemQueue instance");
 }
 
 int itemQueue::cid(){

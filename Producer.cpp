@@ -12,7 +12,7 @@ void Producer::produce(){
 	itemId++;
 
 	crit.lock();
-	cout << "Item Created with attr. " << name << ", " << itemId << endl;
+	cout << "Item Created with attr, Producer:  " << name << ", ID:" << pItem.getId() << endl << endl;
 	iq->put(pItem);
 	crit.unlock();
 }

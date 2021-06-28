@@ -3,11 +3,9 @@
 
 #include <queue>
 #include <mutex>
+#include <stdexcept>
+
 #include "item.h"
-
-
-//TEMP
-#include <iostream>
 
 using namespace std;
 

@@ -5,8 +5,10 @@
 #include "itemQueue.h"
 
 int main(){
+	//Create shared iteqm queue resource
 	itemQueue* iq = new itemQueue();
 
+	//Initialize Producer and Consumers 
 	Producer nProd("First Producer", iq);
 	Consumer nComs("First Consumer", iq);
 
@@ -15,6 +17,7 @@ int main(){
 
 	Consumer tComs("Third Consumer", iq);
 
+	//create threads for Prod Coms objects
 	std::thread nProdth(nProd);
 	nProdth.detach();
 	std::thread nComth(nComs);
@@ -28,7 +31,7 @@ int main(){
         std::thread tComth(tComs);
         tComth.detach();
 
-
+	//prevents the ending of the main application thread
 	while (true);
 }
 

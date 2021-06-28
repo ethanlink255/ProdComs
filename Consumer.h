@@ -5,7 +5,10 @@
 #include <string>
 #include <iostream>
 #include <thread>
+#include <exception>
 
+
+//tells compiler about the mutex crit stored in itemQueue
 extern mutex crit;
 
 class Consumer{
@@ -18,6 +21,7 @@ public:
 
 	void operator() (){
 		while (true){
+			//prevents program from moving too fast for grading
 			this_thread::sleep_for(2000ms);
 			consume();
 		}

@@ -5,13 +5,17 @@ Consumer::Consumer(std::string n, itemQueue* q){
 	name = n;
 }
 
+
 void Consumer::consume(){
 	crit.lock();
-	if(iq->len() != 0){
+
+	//Checks if the shared item queue resource contains any times to take
+	try{
 		item ci = iq->take();
-		cout <<  endl << "Item Taken! CONSID: " << ci.getId() << " CONPID: " << ci.getProducer() << endl << endl;
+		cout << "Item Taken! ItemID: " << ci.getId() << " Producer: " << ci.getProducer() << endl << endl;
 	}
-	else{
+	catch(exception& e){
+
 		cout << "No Items to Take!" << endl << endl;
 
 	}

@@ -9,6 +9,7 @@
 
 using namespace std;
 
+//tells compiler about the mutex crit stored in itemQueue.h
 extern mutex crit;
 
 class Producer{
@@ -23,6 +24,7 @@ public:
 	void operator() (){
 	        while (true){
                 	produce();
+			//prevents program from moving too fast to grade
 			this_thread::sleep_for(2000ms);
         	}
 	}
